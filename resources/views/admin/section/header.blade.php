@@ -47,7 +47,6 @@
     <script src="/assets-admin/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="/assets-admin/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/assets-admin/js/config.js"></script>
     
@@ -99,16 +98,78 @@
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
         <div >Dashboards</div>
-        <div class="badge bg-danger rounded-pill ms-auto">1</div>
+        
       </a>
       <ul class="menu-sub">
         <li class="menu-item active">
-          <a href="" class="menu-link">
+          <a href="{{ route('admin.Dashboard') }}" class="menu-link">
             <div >HOME</div>
           </a>
         </li>
       </ul>
-    </li> 
+    </li>
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+        <div >Cố vấn</div>
+        
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item active">
+          <a href="{{ route('admin.ListMentor') }}" class="menu-link">
+            <div>danh sách</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="{{ route('admin.EditMentor') }}" class="menu-link">
+            <div>sửa</div>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+        <div >Người dùng</div>
+        
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item active">
+          <a href="{{ route('admin.ListUser') }}" class="menu-link">
+            <div>danh sách</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="{{ route('admin.EditUser') }}" class="menu-link">
+            <div>sửa</div>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+        <div >Quản lý bài viết</div>
+        
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item active">
+          <a href="{{ route('admin.ListBlog') }}" class="menu-link">
+            <div>danh sách</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="{{ route('admin.AddBlog') }}" class="menu-link">
+            <div>thêm</div>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="{{ route('admin.EditBlog') }}" class="menu-link">
+            <div>sửa</div>
+          </a>
+        </li>
+      </ul>
+    </li>
   </ul>
   
   

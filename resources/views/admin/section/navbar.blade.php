@@ -67,9 +67,9 @@
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="pages-account-settings-account.html">
+                    <a class="dropdown-item" href="{{ route('admin.Login') }}">
                       <i class="mdi mdi-cog-outline me-1 mdi-20px"></i>
-                      <span class="align-middle">Settings</span>
+                      <span class="align-middle">Log in</span>
                     </a>
                   </li>
                   
