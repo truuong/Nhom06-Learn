@@ -6,7 +6,9 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MentorController;
 use App\Http\Controllers\Admin\BlogController;
+// ----------------------------client----------------------------*******
 
+use App\Http\Controllers\Client\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +25,7 @@ use App\Http\Controllers\Admin\BlogController;
 // });
 Route::prefix('admin')->name('admin.')->group(function () {
 
-    Route::get("/dashboard", [DashboardController::class, "index"])->name("Dashboard");
+    Route::get("/dashboard", [DashboardController::class, "index"])->name("Dashboard-admin");
 
 // -----------------------AUTH-------------------------
     Route::get("/login", [AuthController::class, "login"])->name("Login");
@@ -42,4 +44,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get("/list-blog", [BlogController::class, "list"])->name("ListBlog");
     Route::get("/add-blog", [BlogController::class, "add"])->name("AddBlog");
     Route::get("/edit-blog", [BlogController::class, "edit"])->name("EditBlog");
+});
+
+
+
+
+
+Route::prefix('client')->name('client.')->group(function () {
+    Route::get("/dashboard", [HomeController::class, "index"])->name("Dashboard-client");
+
+
+
+
 });
