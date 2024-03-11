@@ -63,13 +63,7 @@
                             </div>
                             <ul class="main-nav">
                                 <li class="has-submenu active">
-                                    <a href>Home <i class="fas fa-chevron-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="index-two.html">Home Two</a></li>
-                                        <li class="active"><a href="index-three.html">Home Three</a></li>
-                                        <li><a href="index-four.html">Home Four</a></li>
-                                    </ul>
+                                    <a href="{{ route('Dashboard-client') }}">Dashboard </a>
                                 </li>
                                 <li class="has-submenu">
                                     <a href>Instructor <i class="fas fa-chevron-down"></i></a>

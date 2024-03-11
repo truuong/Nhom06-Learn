@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BlogController;
 // ----------------------------client----------------------------*******
 
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\CoursesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,12 +49,30 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
 
+// ---------------------------------------Client-------------------------
+Route::get("/", [HomeController::class, "index"])->name("Dashboard-client");
 
 
 Route::prefix('client')->name('client.')->group(function () {
-    Route::get("/dashboard", [HomeController::class, "index"])->name("Dashboard-client");
+   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------course-details-------------------------
+Route::get("/course-details", [CoursesController::class, "detail"])->name("course-details");
 
 
 });

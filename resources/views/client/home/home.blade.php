@@ -654,8 +654,8 @@
                                             <div class="course-box-three">
                                                 <div class="course-three-item">
                                                     <div class="course-three-img">
-                                                        <a href="course-details.html">
-                                                            <img class="img-fluid" alt
+                                                        <a href="{{ route('client.course-details') }}">
+                                                            <img class="img-fluid" alt=""
                                                                 src="/assets-client/img/course/course-26.jpg">
                                                         </a>
                                                         <div class="heart-three">
@@ -671,7 +671,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="course-three-text">
-                                                            <a href="course-details.html">
+                                                            <a href="{{ route('client.course-details') }}">
                                                                 <p>Personalized Learning</p>
                                                                 <h3 class="title instructor-text">Build Responsive
                                                                     Websites with HTML</h3>

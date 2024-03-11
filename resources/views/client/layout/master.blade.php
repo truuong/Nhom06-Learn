@@ -1,3 +1,3 @@
-@include('components.header');
-@yield('content');
-@include('components.footer');
+@include('components.header')
+@yield('content')
+@include('components.footer')
