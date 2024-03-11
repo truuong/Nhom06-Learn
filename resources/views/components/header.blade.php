@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets-client/plugins/select2/css/select2.min.css">
 
     <link rel="stylesheet" href="/assets-client/plugins/swiper/css/swiper.min.css">
-    <!-- 
+    <!--
 <link rel="stylesheet" href="/assets-client/plugins/aos/aos.css"> -->
 
     <link rel="stylesheet" href="/assets-client/css/style.css">
@@ -69,28 +69,16 @@
                                     <a href>Instructor <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
                                         <li><a href="instructor-dashboard.html">Dashboard</a></li>
-                                        <li class="has-submenu">
-                                            <a href="instructor-list.html">Instructor</a>
-                                            <ul class="submenu">
-                                                <li><a href="instructor-list.html">List</a></li>
-                                                <li><a href="instructor-grid.html">Grid</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="{{ route('client.instructor-list') }}">Instructor</a></li>
+                                        <li><a href="{{ route('client.instructor-profile') }}">Instructor-Profile</a></li>
                                         <li><a href="instructor-course.html">My Course</a></li>
                                         <li><a href="instructor-reviews.html">Reviews</a></li>
                                         <li><a href="instructor-earnings.html">Earnings</a></li>
                                         <li><a href="instructor-orders.html">Orders</a></li>
-                                        <li><a href="instructor-payouts.html">Payouts</a></li>
-                                        <li><a href="instructor-tickets.html">Support Ticket</a></li>
-                                        <li><a href="instructor-edit-profile.html">Instructor Profile</a></li>
-                                        <li><a href="instructor-security.html">Security</a></li>
-                                        <li><a href="instructor-social-profiles.html">Social Profiles</a></li>
-                                        <li><a href="instructor-notification.html">Notifications</a></li>
-                                        <li><a href="instructor-profile-privacy.html">Profile Privacy</a></li>
-                                        <li><a href="instructor-delete-profile.html">Delete Profile</a></li>
-                                        <li><a href="instructor-linked-account.html">Linked Accounts</a></li>
+
                                     </ul>
                                 </li>
+                                <li><a href="{{route('client.course-lists')}}">Course</a></li>
                                 <li class="has-submenu">
                                     <a href>Student <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu first-submenu">

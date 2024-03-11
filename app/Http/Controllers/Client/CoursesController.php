@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 class CoursesController extends Controller
 {
-    
+    public function list(){
+        return view('client.courses.courses-list');
+    }
 
 
 
