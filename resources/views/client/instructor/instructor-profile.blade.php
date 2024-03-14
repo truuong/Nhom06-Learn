@@ -1,5 +1,9 @@
 @extends('client.layout.master')
 @section('content')
+<div class="breadcrumb-bar">
+    <div class="container">
+    </div>
+</div>
     <div class="page-banner instructor-bg-blk">
         <div class="container">
             <div class="row">

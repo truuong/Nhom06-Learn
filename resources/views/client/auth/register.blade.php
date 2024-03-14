@@ -117,8 +117,12 @@
                                     <a href="{{ route('Dashboard-client') }}">Back to Home</a>
                                 </div>
                             </div>
-                            <h1>Sign into Your Account</h1>
+                            <h1>Register New Account</h1>
                             <form action="instructor-dashboard.html">
+                                <div class="input-block">
+                                    <label class="form-control-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your Full Name" />
+                                </div>
                                 <div class="input-block">
                                     <label class="form-control-label">Email</label>
                                     <input type="email" class="form-control" placeholder="Enter your email address">
@@ -130,18 +134,16 @@
                                             placeholder="Enter your password">
                                         <span class="feather-eye toggle-password"></span>
                                     </div>
-                                </div>
-                                <div class="forgot">
-                                    <span><a class="forgot-link" href="{{ route('client.ForgotPass') }}">Forgot Password ?</a></span>
-                                </div>
-                                <div class="remember-me">
-                                    <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
-                                        <input type="checkbox" name="radio">
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <div class="password-strength" id="passwordStrength">
+                                        <span id="poor"></span>
+                                        <span id="weak"></span>
+                                        <span id="strong"></span>
+                                        <span id="heavy"></span>
+                                    </div>
+                                    <div id="passwordInfo"></div>
                                 </div>
                                 <div class="d-grid">
-                                    <button class="btn btn-primary btn-start" type="submit">Sign In</button>
+                                    <button class="btn btn-primary btn-start" type="submit">Sign Up</button>
                                 </div>
                             </form>
                         </div>
@@ -156,7 +158,7 @@
                                             alt="Logo">Sign In using Facebook</a></li>
                             </ul>
                         </div>
-                        <p class="mb-0">New User ? <a href="{{ route('client.Register') }}">Create an Account</a></p>
+                        <p class="mb-0">Already have an account? <a href="{{ route('client.Login') }}">Sign In</a></p>
                     </div>
                 </div>
 

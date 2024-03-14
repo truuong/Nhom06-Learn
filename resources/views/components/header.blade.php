@@ -48,13 +48,13 @@
                                     <span></span>
                                 </span>
                             </a>
-                            <a href="index.html" class="navbar-brand logo">
+                            <a href="{{ route('Dashboard-client') }}" class="navbar-brand logo">
                                 <img src="/assets-client/img/logo/logo.png" class="img-fluid" alt="Logo">
                             </a>
                         </div>
                         <div class="main-menu-wrapper">
                             <div class="menu-header">
-                                <a href="index.html" class="menu-logo">
+                                <a href="{{ route('Dashboard-client') }}" class="menu-logo">
                                     <img src="/assets-client/img/logo/logo.svg" class="img-fluid" alt="Logo">
                                 </a>
                                 <a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -70,7 +70,8 @@
                                     <ul class="submenu">
                                         <li><a href="instructor-dashboard.html">Dashboard</a></li>
                                         <li><a href="{{ route('client.instructor-list') }}">Instructor</a></li>
-                                        <li><a href="{{ route('client.instructor-profile') }}">Instructor-Profile</a></li>
+                                        <li><a href="{{ route('client.instructor-profile') }}">Instructor-Profile</a>
+                                        </li>
                                         <li><a href="instructor-course.html">My Course</a></li>
                                         <li><a href="instructor-reviews.html">Reviews</a></li>
                                         <li><a href="instructor-earnings.html">Earnings</a></li>
@@ -78,7 +79,7 @@
 
                                     </ul>
                                 </li>
-                                <li><a href="{{route('client.course-lists')}}">Course</a></li>
+                                <li><a href="{{ route('client.course-lists') }}">Course</a></li>
                                 <li class="has-submenu">
                                     <a href>Student <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu first-submenu">
@@ -90,17 +91,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="setting-edit-profile.html">Student Profile</a></li>
-                                        <li><a href="setting-student-security.html">Security</a></li>
-                                        <li><a href="setting-student-social-profile.html">Social profile</a></li>
-                                        <li><a href="setting-student-notification.html">Notification</a></li>
-                                        <li><a href="setting-student-privacy.html">Profile Privacy</a></li>
-                                        <li><a href="setting-student-accounts.html">Link Accounts</a></li>
-                                        <li><a href="setting-student-referral.html">Referal</a></li>
-                                        <li><a href="setting-student-subscription.html">Subscribtion</a></li>
-                                        <li><a href="setting-student-billing.html">Billing</a></li>
-                                        <li><a href="setting-student-payment.html">Payment</a></li>
-                                        <li><a href="setting-student-invoice.html">Invoice</a></li>
-                                        <li><a href="setting-support-tickets.html">Support Tickets</a></li>
+
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
@@ -128,13 +119,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="support.html">Support</a></li>
-                                        <li><a href="job-category.html">Category</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                        <li><a href="forgot-password.html">Forgot Password</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
@@ -154,12 +139,50 @@
                         </div>
                         <ul class="nav header-navbar-rht align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link login-three-head button" href="login.html"><span>Login</span></a>
+                                <a class="nav-link login-three-head button" href="{{ route('client.Login') }}"><span>Login</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link signin-three-head" href="register.html">Register</a>
+                                <a class="nav-link signin-three-head" href="{{ route('client.Register') }}">Register</a>
                             </li>
                         </ul>
+                        <ul class="nav ">
+                            <li class="nav-item user-nav">
+                              <div class="dropdown">
+                                <a href="#" >
+                                    <span class="user-img dropdown-toggle">
+                                      <img src="/assets-client/img/instructor/profile-avatar.jpg" alt />
+                                    </span>
+                                  </a>
+                                  <div
+                                    class="users dropdown-menu"
+                                    data-popper-placement="bottom-end"
+                                  >
+                                    <div class="user-header">
+                                      <div class="avatar avatar-sm">
+                                        <img
+                                          src="/assets-client/img/instructor/profile-avatar.jpg"
+                                          alt="User Image"
+                                          class="avatar-img rounded-circle"
+                                        />
+                                      </div>
+                                      <div class="user-text">
+                                        <h6>Jenny Wilson</h6>
+                                        <p class="text-muted mb-0">Instructor</p>
+                                      </div>
+                                    </div>
+                                    <a class="dropdown-item" href="{{ route('client.user-profile') }}"
+                                      ><i class="feather-star me-1"></i> Thông tin người dùng</a
+                                    >
+                                    <a class="dropdown-item" href="{{ route('client.mentor-profile') }}"
+                                      ><i class="feather-star me-1"></i> Thông tin mentor</a
+                                    >
+                                    <a class="dropdown-item" href="{{ route('client.mentor-register') }}"
+                                      ><i class="feather-log-out me-1"></i> Đăng ký mentor</a
+                                    >
+                                  </div>
+                              </div>
+                            </li>
+                          </ul>
                     </div>
                 </nav>
             </div>
